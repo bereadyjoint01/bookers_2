@@ -21,6 +21,7 @@ class BooksController < ApplicationController
 
     else
     @books = Book.all
+    flash[:notice] = "error"
     render 'index'
 
     end
@@ -39,6 +40,7 @@ class BooksController < ApplicationController
 
     else
     @books = Book.all
+    flash[:notice] = "error"
     render 'edit'
 
     end
